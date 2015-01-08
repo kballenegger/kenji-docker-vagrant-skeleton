@@ -1,4 +1,9 @@
 gem 'rack'
+gem 'thin'
 gem 'kenji'
 
-source :rubygems
+group :development do
+  gem 'pry'
+end
+
+source 'https://rubygems.org'

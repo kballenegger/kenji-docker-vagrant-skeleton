@@ -1,0 +1,14 @@
+app:
+  build: docker/app
+  ports:
+    - 80:80
+  volumes:
+    - .:/app
+    - .gems:/usr/local/app-bundle
+  links:
+    - redis
+  entrypoint: ./dev-entrypoint.sh
+  command: bundle exec thin -R config.ru -p 80 start
+
+redis:
+  image: redis:latest
