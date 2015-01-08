@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.0)
+    colorize (0.7.5)
     daemons (1.1.9)
     eventmachine (1.0.4)
     json (1.8.1)
@@ -14,11 +15,17 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-cors (0.3.1)
+    rack-json-logs (1.1)
+      colorize
+      json
+      trollop
     slop (3.6.0)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
       rack (~> 1.0)
+    trollop (2.1.1)
 
 PLATFORMS
   ruby
@@ -27,4 +34,6 @@ DEPENDENCIES
   kenji
   pry
   rack
+  rack-cors
+  rack-json-logs
   thin

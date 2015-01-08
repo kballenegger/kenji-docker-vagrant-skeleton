@@ -1,5 +1,5 @@
 
-class MainController < Kenji::Controller
+class RootController < Kenji::Controller
   get '/index' do
     {hello: :world}
   end
